@@ -15,6 +15,7 @@ export default function AppNavigator(props) {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color, size }) => {
             let iconName = route.name === 'Home' ? 'list' : 'checkmark-done';
+            //ionicon
             return <Ionicons name={iconName} size={size} color={color} />;
           },
         })}

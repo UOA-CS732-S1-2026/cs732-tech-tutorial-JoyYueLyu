@@ -3,11 +3,11 @@ import AppNavigator from './src/navigation/AppNavigator';
 import { useTasks } from './src/hooks/useTasks';
 
 export default function App() {
-  // 调用自定义 Hook 拿到所有状态和方法
+  // Call a custom Hook to get all states and methods
   const taskHooks = useTasks();
 
-  if (!taskHooks.isReady) return null; // 加载中显示空白
+  if (!taskHooks.isReady) return null; 
 
-  // 将所有方法打包传给导航器
+  // Package all methods and pass them to the navigation.
   return <AppNavigator {...taskHooks} />;
 }

@@ -12,9 +12,12 @@ export const useTasks = () => {
 
   // Load data from local storage
   useEffect(() => {
+    //async
     const loadData = async () => {
       try {
         //Retrieve data locally
+        //Both are executed when the component is mounted.
+        //await
         const saved = await AsyncStorage.getItem('MY_TASKS');
         if (saved) setTasks(JSON.parse(saved));
       } catch (e) {
