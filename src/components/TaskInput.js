@@ -17,7 +17,7 @@ export default function TaskInput({ onAdd }) {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="add some test"
+        placeholder="add some task"
         value={text}
         onChangeText={setText}
       />
